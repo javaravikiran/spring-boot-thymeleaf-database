@@ -4,7 +4,17 @@ logging:
       hibernate:
         SQL: DEBUG
         type: TRACE
+server:  
+   port: 9900
+        
+eureka:        #tells about the Eureka server details and its refresh time
+   client:
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/        
 spring:
+  application:
+    name: employee-management-service 
   datasource:    
     url: jdbc:mysql://localhost:3306/ravi_database?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
     username: root
@@ -15,3 +25,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+     
+   
+       
+      
